@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Deep text analysis · frequency · entropy · ║
+ODigest is a deep text intelligence engine for frequency analysis, entropy, language cues, pattern extraction, and IOC-oriented scoring. It supports single-file and batch folder analysis, stego character hunts, and Base64 blob discovery so analysts can triage documents and dumps at scale. JSON output fits scripting pipelines.
 
 ---
 
 ## ✨ Features
 
-- Text forensics — entropy, patterns, stego, IOC scoring, readability
+- Frequency, entropy, readability, and NLP-oriented text scoring
+- Pattern extraction and YARA-like rule matching helpers
+- Zero-width steganography character scanning
+- Base64 blob hunting and IOC scoring modes
+- Single-file and batch folder analysis with top-N controls
+- JSON stdout output for automation
 
 ---
 
@@ -38,7 +43,10 @@ Deep text analysis · frequency · entropy · ║
 ## 🚀 Usage
 
 ```bash
-./ODigest
+./ODigest --file notes.txt
+./ODigest --batch ./corpus --patterns --json
+./ODigest --file dump.txt --stego --b64hunt --ioc-score
+./ODigest --help
 ```
 
 ---
